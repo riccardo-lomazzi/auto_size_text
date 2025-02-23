@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:demo/max_lines_demo.dart';
 import 'package:demo/min_font_size_demo.dart';
@@ -16,12 +18,13 @@ void main() {
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([
+    unawaited(SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
-    ]);
+    ]));
 
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+    unawaited(
+        SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []));
 
     return MaterialApp(
       theme: ThemeData.light(),

@@ -14,10 +14,6 @@ class TextCard extends StatelessWidget {
         Center(child: Text(title)),
         Expanded(
           child: Card(
-            child: Padding(
-              padding: const EdgeInsets.all(8),
-              child: child,
-            ),
             elevation: 0,
             clipBehavior: Clip.antiAlias,
             color: Colors.transparent,
@@ -26,6 +22,10 @@ class TextCard extends StatelessWidget {
               borderRadius: BorderRadius.all(
                 Radius.circular(10),
               ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8),
+              child: child,
             ),
           ),
         ),

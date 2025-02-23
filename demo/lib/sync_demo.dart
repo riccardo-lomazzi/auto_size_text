@@ -15,7 +15,7 @@ class SyncDemo extends StatefulWidget {
 class _SyncDemoState extends State<SyncDemo>
     with SingleTickerProviderStateMixin {
   double _scale = 0;
-  var group = AutoSizeGroup();
+  AutoSizeGroup group = AutoSizeGroup();
   late AnimationController _controller;
 
   @override
@@ -62,19 +62,19 @@ class _SyncDemoState extends State<SyncDemo>
             title: 'AutoSizeText 1',
             child: Visibility(
               visible: !widget.richText,
-              child: AutoSizeText(
-                text,
-                group: group,
-                style: const TextStyle(fontSize: 40),
-                stepGranularity: 0.1,
-                maxLines: 3,
-              ),
               replacement: AutoSizeText.rich(
                 spanFromString(text),
                 group: group,
                 style: const TextStyle(fontSize: 40),
                 stepGranularity: 0.1,
                 maxLines: 4,
+              ),
+              child: AutoSizeText(
+                text,
+                group: group,
+                style: const TextStyle(fontSize: 40),
+                stepGranularity: 0.1,
+                maxLines: 3,
               ),
             ),
           ),
@@ -93,19 +93,19 @@ class _SyncDemoState extends State<SyncDemo>
                   title: 'AutoSizeText 2',
                   child: Visibility(
                     visible: !widget.richText,
-                    child: AutoSizeText(
-                      text,
-                      group: group,
-                      style: const TextStyle(fontSize: 40),
-                      stepGranularity: 0.1,
-                      maxLines: 3,
-                    ),
                     replacement: AutoSizeText.rich(
                       spanFromString(text),
                       group: group,
                       style: const TextStyle(fontSize: 40),
                       stepGranularity: 0.1,
                       maxLines: 4,
+                    ),
+                    child: AutoSizeText(
+                      text,
+                      group: group,
+                      style: const TextStyle(fontSize: 40),
+                      stepGranularity: 0.1,
+                      maxLines: 3,
                     ),
                   ),
                 ),

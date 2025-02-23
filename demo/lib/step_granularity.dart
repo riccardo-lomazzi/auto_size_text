@@ -15,7 +15,7 @@ class StepGranularityDemo extends StatelessWidget {
       text:
           'This String changes its size with a stepGranularity of 10. It will '
           'be automatically resized to fit on 4 lines. Now the text is so '
-          'small, you can\'t even read it...',
+          "small, you can't even read it...",
       builder: (input) {
         return Row(
           children: <Widget>[
