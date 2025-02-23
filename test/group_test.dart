@@ -1,5 +1,5 @@
-import 'package:flutter_auto_size_text/flutter_auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_auto_size_text/flutter_auto_size_text.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:leak_tracker_flutter_testing/leak_tracker_flutter_testing.dart';
 
@@ -11,9 +11,9 @@ class GroupTest extends StatefulWidget {
 }
 
 class GroupTestState extends State<GroupTest> {
-  var group = AutoSizeGroup();
-  var width1 = 300.0;
-  var width2 = 300.0;
+  AutoSizeGroup group = AutoSizeGroup();
+  double width1 = 300.0;
+  double width2 = 300.0;
 
   @override
   Widget build(BuildContext context) {

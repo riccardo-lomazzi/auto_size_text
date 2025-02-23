@@ -6,13 +6,13 @@ class AnimatedInput extends StatefulWidget {
   final String text;
   final InputBuilder builder;
 
-  const AnimatedInput({required this.text, required this.builder});
+  const AnimatedInput({super.key, required this.text, required this.builder});
 
   @override
-  _AnimatedInputState createState() => _AnimatedInputState();
+  AnimatedInputState createState() => AnimatedInputState();
 }
 
-class _AnimatedInputState extends State<AnimatedInput>
+class AnimatedInputState extends State<AnimatedInput>
     with SingleTickerProviderStateMixin {
   String _input = '';
 

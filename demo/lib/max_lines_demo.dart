@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class MaxlinesDemo extends StatelessWidget {
   final bool richText;
 
-  const MaxlinesDemo(this.richText);
+  const MaxlinesDemo(this.richText, {super.key});
 
   @override
   Widget build(BuildContext context) {

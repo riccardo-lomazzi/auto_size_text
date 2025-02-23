@@ -16,26 +16,30 @@ void main() {
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
-    unawaited(SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.landscapeRight,
-    ]));
+    unawaited(
+      SystemChrome.setPreferredOrientations([
+        DeviceOrientation.landscapeLeft,
+        DeviceOrientation.landscapeRight,
+      ]),
+    );
 
     unawaited(
-        SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []));
-
-    return MaterialApp(
-      theme: ThemeData.light(),
-      home: DemoApp(),
+      SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []),
     );
+
+    return MaterialApp(theme: ThemeData.light(), home: DemoApp());
   }
 }
 
 class DemoApp extends StatefulWidget {
+  const DemoApp({super.key});
+
   @override
-  _DemoAppState createState() => _DemoAppState();
+  DemoAppState createState() => DemoAppState();
 }
 
 List<MaterialColor> colors = [
@@ -56,7 +60,7 @@ List<String> demoNames = [
   'OverflowReplacement',
 ];
 
-class _DemoAppState extends State<DemoApp> {
+class DemoAppState extends State<DemoApp> {
   bool _richText = false;
   int _selectedDemo = 0;
   MaterialColor get _selectedColor => colors[_selectedDemo];
@@ -83,23 +87,18 @@ class _DemoAppState extends State<DemoApp> {
                 },
                 activeColor: _selectedColor[400],
                 activeTrackColor: _selectedColor[200],
-              )
+              ),
             ],
           ),
         ],
         title: Text(
           'AutoSizeText: ${demoNames[_selectedDemo]}',
-          style: TextStyle(
-            color: _selectedColor[500],
-          ),
+          style: TextStyle(color: _selectedColor[500]),
         ),
       ),
       body: Container(
         color: _selectedColor[50],
-        child: Padding(
-          padding: const EdgeInsets.all(15),
-          child: _buildDemo(),
-        ),
+        child: Padding(padding: const EdgeInsets.all(15), child: _buildDemo()),
       ),
       bottomNavigationBar: BottomNavyBar(
         selectedIndex: _selectedDemo,

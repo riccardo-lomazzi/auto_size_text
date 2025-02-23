@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 class SyncDemo extends StatefulWidget {
   final bool richText;
 
-  const SyncDemo(this.richText);
+  const SyncDemo(this.richText, {super.key});
 
   @override
-  _SyncDemoState createState() => _SyncDemoState();
+  SyncDemoState createState() => SyncDemoState();
 }
 
-class _SyncDemoState extends State<SyncDemo>
+class SyncDemoState extends State<SyncDemo>
     with SingleTickerProviderStateMixin {
   double _scale = 0;
   AutoSizeGroup group = AutoSizeGroup();

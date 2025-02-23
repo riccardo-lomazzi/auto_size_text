@@ -4,7 +4,7 @@ class TextCard extends StatelessWidget {
   final String title;
   final Widget child;
 
-  const TextCard({required this.title, required this.child});
+  const TextCard({super.key, required this.title, required this.child});
 
   @override
   Widget build(BuildContext context) {

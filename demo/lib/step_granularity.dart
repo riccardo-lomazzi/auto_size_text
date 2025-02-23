@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class StepGranularityDemo extends StatelessWidget {
   final bool richText;
 
-  const StepGranularityDemo(this.richText);
+  const StepGranularityDemo(this.richText, {super.key});
 
   @override
   Widget build(BuildContext context) {
