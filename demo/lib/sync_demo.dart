@@ -1,8 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:demo/text_card.dart';
+import 'package:demo/utils.dart';
 import 'package:flutter/material.dart';
-
-import 'text_card.dart';
-import 'utils.dart';
 
 class SyncDemo extends StatefulWidget {
   final bool richText;

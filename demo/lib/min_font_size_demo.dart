@@ -1,9 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:demo/animated_input.dart';
+import 'package:demo/text_card.dart';
+import 'package:demo/utils.dart';
 import 'package:flutter/material.dart';
-
-import 'animated_input.dart';
-import 'text_card.dart';
-import 'utils.dart';
 
 class MinFontSizeDemo extends StatelessWidget {
   final bool richText;

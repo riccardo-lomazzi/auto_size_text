@@ -1,14 +1,13 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:demo/max_lines_demo.dart';
+import 'package:demo/min_font_size_demo.dart';
+import 'package:demo/overflow_replacement_demo.dart';
+import 'package:demo/preset_font_sizes_demo.dart';
+import 'package:demo/step_granularity.dart';
+import 'package:demo/sync_demo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-
-import 'max_lines_demo.dart';
-import 'min_font_size_demo.dart';
-import 'overflow_replacement_demo.dart';
-import 'preset_font_sizes_demo.dart';
-import 'step_granularity.dart';
-import 'sync_demo.dart';
 
 void main() {
   runApp(App());
