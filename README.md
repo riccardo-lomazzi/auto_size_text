@@ -1,6 +1,6 @@
 # AutoSizeText
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/leisim/auto_size_text/CI) [![codecov](https://codecov.io/gh/leisim/auto_size_text/branch/master/graph/badge.svg)](https://codecov.io/gh/leisim/auto_size_text) [![Version](https://img.shields.io/pub/v/auto_size_text.svg)](https://pub.dev/packages/auto_size_text) ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/fafre/auto_size_text/CI) [![codecov](https://codecov.io/gh/fafre/auto_size_text/branch/master/graph/badge.svg)](https://codecov.io/gh/fafre/auto_size_text) [![Version](https://img.shields.io/pub/v/auto_size_text.svg)](https://pub.dev/packages/auto_size_text) ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
 
 Flutter widget that automatically resizes text to fit perfectly within its bounds.
 
@@ -8,14 +8,14 @@ Flutter widget that automatically resizes text to fit perfectly within its bound
 
 ### Resources:
 - [Documentation](https://pub.dev/documentation/auto_size_text/latest/auto_size_text/AutoSizeText-class.html)
-- [Pub Package](https://pub.dev/packages/auto_size_text)
-- [GitHub Repository](https://github.com/leisim/auto_size_text)
+- [Pub Package](https://pub.dev/packages/flutter_auto_size_text)
+- [GitHub Repository](https://github.com/fafre/auto_size_text)
 - [Online Demo](https://appetize.io/app/w352kxbnz51c6pfvxrdvxcb3xw?device=nexus5&scale=100&orientation=landscape&osVersion=8.1&deviceColor=black)
 
-Also check out the blazing fast key-value store [hive](https://github.com/leisim/hive).
+Also check out the blazing fast key-value store [hive](https://github.com/fafre/hive).
 
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/maxlines.gif)
+![](https://raw.githubusercontent.com/fafre/auto_size_text/master/.github/art/maxlines.gif)
 
 ## Contents
 
@@ -80,7 +80,7 @@ AutoSizeText(
 )
 ```
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/minfontsize.gif)
+![](https://raw.githubusercontent.com/fafre/auto_size_text/master/.github/art/minfontsize.gif)
 
 
 ### group
@@ -107,7 +107,7 @@ AutoSizeText(
 );
 ```
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/group.gif)
+![](https://raw.githubusercontent.com/fafre/auto_size_text/master/.github/art/group.gif)
 
 
 ### stepGranularity
@@ -126,7 +126,7 @@ AutoSizeText(
 )
 ```
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/stepgranularity.gif)
+![](https://raw.githubusercontent.com/fafre/auto_size_text/master/.github/art/stepgranularity.gif)
 
 
 ### presetFontSizes
@@ -142,7 +142,7 @@ AutoSizeText(
 )
 ```
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/presetfontsizes.gif)
+![](https://raw.githubusercontent.com/fafre/auto_size_text/master/.github/art/presetfontsizes.gif)
 
 
 ### overflowReplacement
@@ -157,7 +157,7 @@ AutoSizeText(
 )
 ```
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/overflowreplacement.gif)
+![](https://raw.githubusercontent.com/fafre/auto_size_text/master/.github/art/overflowreplacement.gif)
 
 
 ## Rich Text
@@ -179,7 +179,7 @@ AutoSizeText.rich(
 The text will be at least 1/4 of its original size (5 / 20 = 1/4).  
 But it does not mean that all `TextSpan`s have at least font size `5`.
 
-![](https://raw.githubusercontent.com/leisim/auto_size_text/master/.github/art/maxlines_rich.gif)
+![](https://raw.githubusercontent.com/fafre/auto_size_text/master/.github/art/maxlines_rich.gif)
 
 
 ## Parameters
@@ -251,7 +251,7 @@ Row(
 }
 ```
 
-Further explanation can be found [here](https://stackoverflow.com/a/53908204). If you still have problems, please [open an issue](https://github.com/leisim/auto_size_text/issues/new).
+Further explanation can be found [here](https://stackoverflow.com/a/53908204). If you still have problems, please [open an issue](https://github.com/fafre/auto_size_text/issues/new).
 
 
 ### MinFontSize too large
