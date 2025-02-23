@@ -51,7 +51,7 @@ void main() {
       fontSize: 20,
       color: Colors.yellow,
     );
-    final text = await pumpAndGetText(
+    final text = await pumpAndGet<RichText>(
       tester: tester,
       widget: const DefaultTextStyle(
         style: defaultStyle,
@@ -65,12 +65,10 @@ void main() {
       ),
     );
     expect(text.style, defaultStyle);
-
-    final richText = getRichText(tester);
-    expect(richText.textAlign, TextAlign.right);
-    expect(richText.softWrap, false);
-    expect(richText.overflow, TextOverflow.ellipsis);
-    expect(richText.maxLines, 17);
+    expect(text.textAlign, TextAlign.right);
+    expect(text.softWrap, false);
+    expect(text.overflow, TextOverflow.ellipsis);
+    expect(text.maxLines, 17);
   });
 
   testWidgets('Applies scale even if initial fontSize fits (#25)',
@@ -88,7 +86,7 @@ void main() {
 
   testWidgets('Uses textKey', (tester) async {
     final textKey = GlobalKey();
-    final text = await pumpAndGetText(
+    final text = await pumpAndGet<Text>(
       tester: tester,
       widget: AutoSizeText(
         'A text with key',

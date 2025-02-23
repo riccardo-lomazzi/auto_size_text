@@ -6,7 +6,6 @@ import 'package:demo/min_font_size_demo.dart';
 import 'package:demo/overflow_replacement_demo.dart';
 import 'package:demo/preset_font_sizes_demo.dart';
 import 'package:demo/step_granularity.dart';
-import 'package:demo/sync_demo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -119,11 +118,6 @@ class DemoAppState extends State<DemoApp> {
             activeColor: colors[1],
           ),
           BottomNavyBarItem(
-            icon: const Icon(Icons.sync, size: 26),
-            title: const Text('group'),
-            activeColor: colors[2],
-          ),
-          BottomNavyBarItem(
             icon: const Icon(Icons.format_size),
             title: const Text('granularity'),
             activeColor: colors[3],
@@ -145,10 +139,8 @@ class DemoAppState extends State<DemoApp> {
       case 1:
         return MinFontSizeDemo(_richText);
       case 2:
-        return SyncDemo(_richText);
-      case 3:
         return StepGranularityDemo(_richText);
-      case 4:
+      case 3:
         return PresetFontSizesDemo(_richText);
       default:
         return OverflowReplacementDemo(_richText);

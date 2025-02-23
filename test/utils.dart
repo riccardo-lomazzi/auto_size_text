@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-double effectiveFontSize(Text text) =>
-    (text.textScaleFactor ?? 1) * text.style!.fontSize!;
+double effectiveFontSize(RichText text) =>
+    text.textScaler.scale(text.text.style?.fontSize ?? 14);
 
 bool doesTextFit(
   Text text, [
@@ -24,7 +24,7 @@ bool doesTextFit(
     text: span,
     textAlign: text.textAlign ?? TextAlign.start,
     textDirection: text.textDirection,
-    textScaleFactor: text.textScaleFactor ?? 1,
+    textScaler: text.textScaler ?? TextScaler.noScaling,
     maxLines: text.maxLines,
     locale: text.locale,
     strutStyle: text.strutStyle,
@@ -32,9 +32,13 @@ bool doesTextFit(
 
   textPainter.layout(maxWidth: maxWidth);
 
-  return !(textPainter.didExceedMaxLines ||
+  final result = !(textPainter.didExceedMaxLines ||
       textPainter.height > maxHeight ||
       textPainter.width > maxWidth);
+
+  textPainter.dispose();
+
+  return result;
 }
 
 bool prepared = false;
@@ -44,6 +48,7 @@ Future prepareTests(WidgetTester tester) async {
     return;
   }
 
+  //tester.binding.addTime(const Duration(seconds: 10));
   prepared = true;
   final fontData = File('test/assets/Roboto-Regular.ttf')
       .readAsBytes()
@@ -67,12 +72,12 @@ Future pump({
   );
 }
 
-Future<Text> pumpAndGetText({
+Future<T> pumpAndGet<T extends Widget>({
   required WidgetTester tester,
   required Widget widget,
 }) async {
   await pump(tester: tester, widget: widget);
-  return tester.widget<Text>(find.byType(Text));
+  return tester.widget<T>(find.byType(T));
 }
 
 Future pumpAndExpectFontSize({
@@ -80,21 +85,22 @@ Future pumpAndExpectFontSize({
   required double expectedFontSize,
   required Widget widget,
 }) async {
-  final text = await pumpAndGetText(tester: tester, widget: widget);
+  final text = await pumpAndGet<RichText>(tester: tester, widget: widget);
   expect(effectiveFontSize(text), expectedFontSize);
 }
-
-RichText getRichText(WidgetTester tester) =>
-    tester.widget(find.byType(RichText));
 
 class OverflowNotifier extends StatelessWidget {
   final VoidCallback overflowCallback;
 
-  const OverflowNotifier(this.overflowCallback);
+  const OverflowNotifier({super.key, required this.overflowCallback});
 
   @override
   Widget build(BuildContext context) {
     overflowCallback();
     return Container();
   }
+}
+
+extension RichTextX on RichText {
+  TextStyle? get style => text.style;
 }

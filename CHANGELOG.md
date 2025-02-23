@@ -1,3 +1,11 @@
+## 4.1.0
+- Added `AutoSizeBuilder`, `SelectableAutoSize`, `AutoSizeTextField` and `AutoSizeGroupBuilder`
+- Added `textWidthBasis` and `textHeightBehavior`
+- Changed default `wordWrap` to `false`
+- Improved performance
+- Fixed intrinsics handling
+- Fixed `wordWrap` calculation for rich text
+
 ## 4.0.0
 - Fix TextPainter leaking (https://github.com/simc/auto_size_text/pull/149)
 - Support textScaler in favor of the deprecated textScaleFactor (https://github.com/simc/auto_size_text/pull/148)

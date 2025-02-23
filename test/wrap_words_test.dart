@@ -19,7 +19,6 @@ void main() {
         child: AutoSizeText(
           'XXXXX XXXXX',
           style: TextStyle(fontSize: 25),
-          wrapWords: false,
         ),
       ),
     );
@@ -36,7 +35,6 @@ void main() {
           style: TextStyle(fontSize: 25),
           minFontSize: 10,
           maxLines: 10,
-          wrapWords: false,
         ),
       ),
     );
@@ -54,6 +52,7 @@ void main() {
           'XXXXXX',
           style: TextStyle(fontSize: 40),
           maxLines: 2,
+          wrapWords: true,
         ),
       ),
     );

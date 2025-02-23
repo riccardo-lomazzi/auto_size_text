@@ -89,6 +89,7 @@ void main() {
           'XXXXXX',
           style: TextStyle(fontSize: 200),
           maxLines: 2,
+          wrapWords: true,
         ),
       ),
     );
