@@ -1,16 +1,16 @@
 name: demo
-description: AutoSizeText Demo App
-
-version: 1.0.0+3
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
 
 environment:
-  sdk: ">=3.2.0 <4.0.0"
+  sdk: ^3.7.0
 
 dependencies:
   flutter:
     sdk: flutter
 
-  auto_size_text:
+  flutter_auto_size_text:
     path: ../
 
   bottom_navy_bar: ^6.1.0
@@ -19,8 +19,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
-
-publish_to: none

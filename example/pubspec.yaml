@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  auto_size_text:
+  flutter_auto_size_text:
     path: ../
 
 dev_dependencies:

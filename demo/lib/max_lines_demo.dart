@@ -1,4 +1,4 @@
-import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter_auto_size_text/flutter_auto_size_text.dart';
 import 'package:demo/animated_input.dart';
 import 'package:demo/text_card.dart';
 import 'package:demo/utils.dart';
@@ -19,32 +19,31 @@ class MaxlinesDemo extends StatelessWidget {
             Expanded(
               child: TextCard(
                 title: 'Text',
-                child: !richText
-                    ? Text(
-                        input,
-                        style: const TextStyle(fontSize: 30),
-                      )
-                    : Text.rich(
-                        spanFromString(input),
-                        style: const TextStyle(fontSize: 30),
-                      ),
+                child:
+                    !richText
+                        ? Text(input, style: const TextStyle(fontSize: 30))
+                        : Text.rich(
+                          spanFromString(input),
+                          style: const TextStyle(fontSize: 30),
+                        ),
               ),
             ),
             const SizedBox(width: 10),
             Expanded(
               child: TextCard(
                 title: 'AutoSizeText',
-                child: !richText
-                    ? AutoSizeText(
-                        input,
-                        style: const TextStyle(fontSize: 30),
-                        maxLines: 2,
-                      )
-                    : AutoSizeText.rich(
-                        spanFromString(input),
-                        style: const TextStyle(fontSize: 30),
-                        maxLines: 2,
-                      ),
+                child:
+                    !richText
+                        ? AutoSizeText(
+                          input,
+                          style: const TextStyle(fontSize: 30),
+                          maxLines: 2,
+                        )
+                        : AutoSizeText.rich(
+                          spanFromString(input),
+                          style: const TextStyle(fontSize: 30),
+                          maxLines: 2,
+                        ),
               ),
             ),
           ],

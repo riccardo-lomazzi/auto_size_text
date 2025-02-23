@@ -1,4 +1,4 @@
-import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter_auto_size_text/flutter_auto_size_text.dart';
 import 'package:demo/animated_input.dart';
 import 'package:demo/text_card.dart';
 import 'package:demo/utils.dart';
@@ -22,40 +22,42 @@ class StepGranularityDemo extends StatelessWidget {
             Expanded(
               child: TextCard(
                 title: 'Text',
-                child: !richText
-                    ? Text(
-                        input,
-                        style: const TextStyle(fontSize: 40),
-                        maxLines: 4,
-                      )
-                    : Text.rich(
-                        spanFromString(input),
-                        style: const TextStyle(fontSize: 40),
-                        maxLines: 4,
-                      ),
+                child:
+                    !richText
+                        ? Text(
+                          input,
+                          style: const TextStyle(fontSize: 40),
+                          maxLines: 4,
+                        )
+                        : Text.rich(
+                          spanFromString(input),
+                          style: const TextStyle(fontSize: 40),
+                          maxLines: 4,
+                        ),
               ),
             ),
             const SizedBox(width: 10),
             Expanded(
               child: TextCard(
                 title: 'AutoSizeText',
-                child: !richText
-                    ? AutoSizeText(
-                        input,
-                        style: const TextStyle(fontSize: 40),
-                        stepGranularity: 10,
-                        minFontSize: 10,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 4,
-                      )
-                    : AutoSizeText.rich(
-                        spanFromString(input),
-                        style: const TextStyle(fontSize: 40),
-                        stepGranularity: 10,
-                        minFontSize: 10,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 4,
-                      ),
+                child:
+                    !richText
+                        ? AutoSizeText(
+                          input,
+                          style: const TextStyle(fontSize: 40),
+                          stepGranularity: 10,
+                          minFontSize: 10,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 4,
+                        )
+                        : AutoSizeText.rich(
+                          spanFromString(input),
+                          style: const TextStyle(fontSize: 40),
+                          stepGranularity: 10,
+                          minFontSize: 10,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 4,
+                        ),
               ),
             ),
           ],
