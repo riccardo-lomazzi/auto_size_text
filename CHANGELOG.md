@@ -1,3 +1,10 @@
+## 4.0.0
+- Fix TextPainter leaking (https://github.com/simc/auto_size_text/pull/149)
+- Support textScaler in favor of the deprecated textScaleFactor (https://github.com/simc/auto_size_text/pull/148)
+- Upgraded dependecies
+- Use `const` wherever possible
+- Modernize code base
+
 ## 3.0.0
 - Upgraded to null safety
 

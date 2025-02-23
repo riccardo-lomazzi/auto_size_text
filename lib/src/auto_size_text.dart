@@ -1,4 +1,9 @@
-part of '../auto_size_text.dart';
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+
+part 'auto_size_group.dart';
+part 'auto_size_group_builder.dart';
 
 /// Flutter widget that automatically resizes text to fit perfectly within its
 /// bounds.

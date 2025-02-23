@@ -1,4 +1,4 @@
-part of '../auto_size_text.dart';
+part of 'auto_size_text.dart';
 
 /// A Flutter widget that provides an [AutoSizeGroup] to its builder function.
 class AutoSizeGroupBuilder extends StatefulWidget {
