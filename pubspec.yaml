@@ -14,3 +14,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   lints: ^4.0.0
+
+
+  # Setting to any will let the SDK version define
+  # the most compatible version.
+  leak_tracker_flutter_testing: any
