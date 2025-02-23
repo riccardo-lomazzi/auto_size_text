@@ -46,7 +46,8 @@ void _expectFontSizes(WidgetTester tester, double fontSize) {
 }
 
 void main() {
-  LeakTesting.settings = LeakTesting.settings.withIgnored(createdByTestHelpers: true);
+  LeakTesting.settings =
+      LeakTesting.settings.withIgnored(createdByTestHelpers: true);
   LeakTesting.enable();
 
   testWidgets('Group sync', (tester) async {
@@ -89,4 +90,3 @@ void main() {
     _expectFontSizes(tester, 50);
   });
 }
-
