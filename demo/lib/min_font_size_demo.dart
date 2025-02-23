@@ -8,7 +8,7 @@ import 'utils.dart';
 class MinFontSizeDemo extends StatelessWidget {
   final bool richText;
 
-  MinFontSizeDemo(this.richText);
+  const MinFontSizeDemo(this.richText);
 
   @override
   Widget build(BuildContext context) {
@@ -26,31 +26,31 @@ class MinFontSizeDemo extends StatelessWidget {
                 child: !richText
                     ? Text(
                         input,
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                         maxLines: 4,
                       )
                     : Text.rich(
                         spanFromString(input),
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                         maxLines: 4,
                       ),
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: TextCard(
                 title: 'AutoSizeText',
                 child: !richText
                     ? AutoSizeText(
                         input,
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                         minFontSize: 20,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 4,
                       )
                     : AutoSizeText.rich(
                         spanFromString(input),
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                         minFontSize: 20,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 4,

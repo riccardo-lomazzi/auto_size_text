@@ -70,7 +70,7 @@ class _DemoAppState extends State<DemoApp> {
             children: <Widget>[
               Text(
                 _richText ? 'Rich Text' : 'Normal Text',
-                style: TextStyle(color: Colors.black, inherit: true),
+                style: const TextStyle(color: Colors.black, inherit: true),
               ),
               Switch(
                 value: _richText,
@@ -96,7 +96,7 @@ class _DemoAppState extends State<DemoApp> {
       body: Container(
         color: _selectedColor[50],
         child: Padding(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           child: _buildDemo(),
         ),
       ),
@@ -109,28 +109,28 @@ class _DemoAppState extends State<DemoApp> {
         },
         items: [
           BottomNavyBarItem(
-            icon: Icon(Icons.view_headline),
-            title: Text('maxLines'),
+            icon: const Icon(Icons.view_headline),
+            title: const Text('maxLines'),
             activeColor: colors[0],
           ),
           BottomNavyBarItem(
             icon: Icon(MdiIcons.formatFontSizeDecrease, size: 26),
-            title: Text('minFontSize'),
+            title: const Text('minFontSize'),
             activeColor: colors[1],
           ),
           BottomNavyBarItem(
-            icon: Icon(Icons.sync, size: 26),
-            title: Text('group'),
+            icon: const Icon(Icons.sync, size: 26),
+            title: const Text('group'),
             activeColor: colors[2],
           ),
           BottomNavyBarItem(
-            icon: Icon(Icons.format_size),
-            title: Text('granularity'),
+            icon: const Icon(Icons.format_size),
+            title: const Text('granularity'),
             activeColor: colors[3],
           ),
           BottomNavyBarItem(
-            icon: Icon(Icons.settings),
-            title: Text('preset'),
+            icon: const Icon(Icons.settings),
+            title: const Text('preset'),
             activeColor: colors[4],
           ),
         ],

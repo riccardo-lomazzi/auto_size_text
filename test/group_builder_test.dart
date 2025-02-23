@@ -15,7 +15,7 @@ Widget testWidget({required double width1, required double width2}) {
             height: 100,
             child: AutoSizeText(
               'XXXXXX',
-              style: TextStyle(fontSize: 60),
+              style: const TextStyle(fontSize: 60),
               minFontSize: 1,
               maxLines: 1,
               group: group,
@@ -26,7 +26,7 @@ Widget testWidget({required double width1, required double width2}) {
             height: 100.0,
             child: AutoSizeText(
               'XXXXXX',
-              style: TextStyle(fontSize: 60),
+              style: const TextStyle(fontSize: 60),
               minFontSize: 1,
               maxLines: 1,
               group: group,

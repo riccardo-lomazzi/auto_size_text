@@ -12,7 +12,7 @@ void main() {
   testWidgets('Respects maxlines', (tester) async {
     await pump(
       tester: tester,
-      widget: AutoSizeText(
+      widget: const AutoSizeText(
         'XXXXX',
         style: TextStyle(fontSize: 27),
         maxLines: 1,
@@ -23,7 +23,7 @@ void main() {
 
     await pump(
       tester: tester,
-      widget: SizedBox(
+      widget: const SizedBox(
         width: 75,
         child: AutoSizeText(
           'XXX XXX',

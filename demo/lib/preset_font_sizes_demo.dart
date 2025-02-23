@@ -8,7 +8,7 @@ import 'utils.dart';
 class PresetFontSizesDemo extends StatelessWidget {
   final bool richText;
 
-  PresetFontSizesDemo(this.richText);
+  const PresetFontSizesDemo(this.richText);
 
   @override
   Widget build(BuildContext context) {
@@ -25,17 +25,17 @@ class PresetFontSizesDemo extends StatelessWidget {
                 child: !richText
                     ? Text(
                         input,
-                        style: TextStyle(fontSize: 40),
+                        style: const TextStyle(fontSize: 40),
                         maxLines: 4,
                       )
                     : Text.rich(
                         spanFromString(input),
-                        style: TextStyle(fontSize: 40),
+                        style: const TextStyle(fontSize: 40),
                         maxLines: 4,
                       ),
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: TextCard(
                 title: 'AutoSizeText',

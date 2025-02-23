@@ -7,7 +7,7 @@ import 'utils.dart';
 class SyncDemo extends StatefulWidget {
   final bool richText;
 
-  SyncDemo(this.richText);
+  const SyncDemo(this.richText);
 
   @override
   _SyncDemoState createState() => _SyncDemoState();
@@ -24,7 +24,7 @@ class _SyncDemoState extends State<SyncDemo>
     super.initState();
 
     _controller = AnimationController(
-      duration: Duration(milliseconds: 5000),
+      duration: const Duration(milliseconds: 5000),
       vsync: this,
     );
     _controller.addListener(() {
@@ -35,7 +35,7 @@ class _SyncDemoState extends State<SyncDemo>
 
     _controller.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        Future.delayed(Duration(seconds: 3), () {
+        Future.delayed(const Duration(seconds: 3), () {
           _controller.forward(from: 0.1);
         });
       }
@@ -66,21 +66,21 @@ class _SyncDemoState extends State<SyncDemo>
               child: AutoSizeText(
                 text,
                 group: group,
-                style: TextStyle(fontSize: 40),
+                style: const TextStyle(fontSize: 40),
                 stepGranularity: 0.1,
                 maxLines: 3,
               ),
               replacement: AutoSizeText.rich(
                 spanFromString(text),
                 group: group,
-                style: TextStyle(fontSize: 40),
+                style: const TextStyle(fontSize: 40),
                 stepGranularity: 0.1,
                 maxLines: 4,
               ),
             ),
           ),
         ),
-        SizedBox(height: 10.0),
+        const SizedBox(height: 10.0),
         Expanded(
           child: Row(
             children: <Widget>[
@@ -97,14 +97,14 @@ class _SyncDemoState extends State<SyncDemo>
                     child: AutoSizeText(
                       text,
                       group: group,
-                      style: TextStyle(fontSize: 40),
+                      style: const TextStyle(fontSize: 40),
                       stepGranularity: 0.1,
                       maxLines: 3,
                     ),
                     replacement: AutoSizeText.rich(
                       spanFromString(text),
                       group: group,
-                      style: TextStyle(fontSize: 40),
+                      style: const TextStyle(fontSize: 40),
                       stepGranularity: 0.1,
                       maxLines: 4,
                     ),

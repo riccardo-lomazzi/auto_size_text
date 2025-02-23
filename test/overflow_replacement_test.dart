@@ -12,7 +12,7 @@ void main() {
   testWidgets('Overflow replacement visible on overflow', (tester) async {
     final text = await pumpAndGetText(
       tester: tester,
-      widget: SizedBox(
+      widget: const SizedBox(
         width: 100,
         height: 20,
         child: AutoSizeText(
@@ -29,7 +29,7 @@ void main() {
       (tester) async {
     final text = await pumpAndGetText(
       tester: tester,
-      widget: SizedBox(
+      widget: const SizedBox(
         width: 100,
         height: 20,
         child: AutoSizeText(

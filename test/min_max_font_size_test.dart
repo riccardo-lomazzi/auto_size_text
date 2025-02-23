@@ -12,7 +12,7 @@ void main() {
 
   testWidgets('Forces valid min and max fontSize', (tester) async {
     await tester.pumpWidget(
-      AutoSizeText(
+      const AutoSizeText(
         'AutoSizeText Test',
         style: TextStyle(fontSize: 25),
         minFontSize: -1,
@@ -21,7 +21,7 @@ void main() {
     expect(tester.takeException(), isAssertionError);
 
     await tester.pumpWidget(
-      AutoSizeText(
+      const AutoSizeText(
         'AutoSizeText Test',
         style: TextStyle(fontSize: 25),
         maxFontSize: 0,
@@ -30,7 +30,7 @@ void main() {
     expect(tester.takeException(), isAssertionError);
 
     await tester.pumpWidget(
-      AutoSizeText(
+      const AutoSizeText(
         'AutoSizeText Test',
         style: TextStyle(fontSize: 25),
         minFontSize: 20,
@@ -44,7 +44,7 @@ void main() {
     await pumpAndExpectFontSize(
       tester: tester,
       expectedFontSize: 15,
-      widget: SizedBox(
+      widget: const SizedBox(
         width: 10,
         height: 10,
         child: AutoSizeText(
@@ -60,7 +60,7 @@ void main() {
     await pumpAndExpectFontSize(
       tester: tester,
       expectedFontSize: 30,
-      widget: SizedBox(
+      widget: const SizedBox(
         width: 120,
         height: 40,
         child: AutoSizeText(
@@ -76,7 +76,7 @@ void main() {
     await pumpAndExpectFontSize(
       tester: tester,
       expectedFontSize: 20,
-      widget: DefaultTextStyle(
+      widget: const DefaultTextStyle(
         style: TextStyle(fontSize: 30),
         child: AutoSizeText(
           'AutoSizeText Test',
@@ -88,7 +88,7 @@ void main() {
     await pumpAndExpectFontSize(
       tester: tester,
       expectedFontSize: 20,
-      widget: AutoSizeText(
+      widget: const AutoSizeText(
         'AutoSizeText Test',
         style: TextStyle(fontSize: 30),
         maxFontSize: 20,
@@ -98,7 +98,7 @@ void main() {
     await pumpAndExpectFontSize(
       tester: tester,
       expectedFontSize: 20,
-      widget: AutoSizeText(
+      widget: const AutoSizeText(
         'AutoSizeText Test',
         style: TextStyle(fontSize: 20),
         maxFontSize: 30,

@@ -8,7 +8,7 @@ import 'utils.dart';
 class OverflowReplacementDemo extends StatelessWidget {
   final bool richText;
 
-  OverflowReplacementDemo(this.richText);
+  const OverflowReplacementDemo(this.richText);
 
   @override
   Widget build(BuildContext context) {
@@ -26,26 +26,26 @@ class OverflowReplacementDemo extends StatelessWidget {
                 child: !richText
                     ? Text(
                         input,
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                         maxLines: 4,
                       )
                     : Text.rich(
                         spanFromString(input),
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                         maxLines: 4,
                       ),
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: TextCard(
                 title: 'AutoSizeText',
                 child: !richText
                     ? AutoSizeText(
                         input,
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                         minFontSize: 20,
-                        overflowReplacement: Text(
+                        overflowReplacement: const Text(
                           'String cannot be displayed.',
                           style: TextStyle(
                             color: Colors.red,
@@ -56,9 +56,9 @@ class OverflowReplacementDemo extends StatelessWidget {
                       )
                     : AutoSizeText.rich(
                         spanFromString(input),
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                         minFontSize: 20,
-                        overflowReplacement: Text(
+                        overflowReplacement: const Text(
                           'String cannot be displayed.',
                           style: TextStyle(
                             color: Colors.red,

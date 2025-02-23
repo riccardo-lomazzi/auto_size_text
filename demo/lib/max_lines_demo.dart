@@ -8,7 +8,7 @@ import 'utils.dart';
 class MaxlinesDemo extends StatelessWidget {
   final bool richText;
 
-  MaxlinesDemo(this.richText);
+  const MaxlinesDemo(this.richText);
 
   @override
   Widget build(BuildContext context) {
@@ -23,27 +23,27 @@ class MaxlinesDemo extends StatelessWidget {
                 child: !richText
                     ? Text(
                         input,
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                       )
                     : Text.rich(
                         spanFromString(input),
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                       ),
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: TextCard(
                 title: 'AutoSizeText',
                 child: !richText
                     ? AutoSizeText(
                         input,
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                         maxLines: 2,
                       )
                     : AutoSizeText.rich(
                         spanFromString(input),
-                        style: TextStyle(fontSize: 30),
+                        style: const TextStyle(fontSize: 30),
                         maxLines: 2,
                       ),
               ),

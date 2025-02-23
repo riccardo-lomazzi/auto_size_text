@@ -8,7 +8,7 @@ import 'utils.dart';
 class StepGranularityDemo extends StatelessWidget {
   final bool richText;
 
-  StepGranularityDemo(this.richText);
+  const StepGranularityDemo(this.richText);
 
   @override
   Widget build(BuildContext context) {
@@ -26,24 +26,24 @@ class StepGranularityDemo extends StatelessWidget {
                 child: !richText
                     ? Text(
                         input,
-                        style: TextStyle(fontSize: 40),
+                        style: const TextStyle(fontSize: 40),
                         maxLines: 4,
                       )
                     : Text.rich(
                         spanFromString(input),
-                        style: TextStyle(fontSize: 40),
+                        style: const TextStyle(fontSize: 40),
                         maxLines: 4,
                       ),
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: TextCard(
                 title: 'AutoSizeText',
                 child: !richText
                     ? AutoSizeText(
                         input,
-                        style: TextStyle(fontSize: 40),
+                        style: const TextStyle(fontSize: 40),
                         stepGranularity: 10,
                         minFontSize: 10,
                         overflow: TextOverflow.ellipsis,
@@ -51,7 +51,7 @@ class StepGranularityDemo extends StatelessWidget {
                       )
                     : AutoSizeText.rich(
                         spanFromString(input),
-                        style: TextStyle(fontSize: 40),
+                        style: const TextStyle(fontSize: 40),
                         stepGranularity: 10,
                         minFontSize: 10,
                         overflow: TextOverflow.ellipsis,

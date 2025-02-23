@@ -91,7 +91,7 @@ RichText getRichText(WidgetTester tester) =>
 class OverflowNotifier extends StatelessWidget {
   final VoidCallback overflowCallback;
 
-  OverflowNotifier(this.overflowCallback);
+  const OverflowNotifier(this.overflowCallback);
 
   @override
   Widget build(BuildContext context) {
