@@ -118,7 +118,6 @@ void main() {
           'XXXXXX',
           style: TextStyle(fontSize: 33.5),
           maxLines: 1,
-          stepGranularity: 1,
         ),
       ),
     );
@@ -133,7 +132,6 @@ void main() {
           'XXXXXX',
           style: TextStyle(fontSize: 33.5),
           maxLines: 1,
-          stepGranularity: 1,
         ),
       ),
     );

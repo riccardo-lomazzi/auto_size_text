@@ -69,7 +69,7 @@ class _DemoAppState extends State<DemoApp> {
             children: <Widget>[
               Text(
                 _richText ? 'Rich Text' : 'Normal Text',
-                style: const TextStyle(color: Colors.black, inherit: true),
+                style: const TextStyle(color: Colors.black),
               ),
               Switch(
                 value: _richText,
@@ -88,7 +88,6 @@ class _DemoAppState extends State<DemoApp> {
           'AutoSizeText: ${demoNames[_selectedDemo]}',
           style: TextStyle(
             color: _selectedColor[500],
-            inherit: true,
           ),
         ),
       ),
