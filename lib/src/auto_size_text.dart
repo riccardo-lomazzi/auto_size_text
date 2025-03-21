@@ -161,6 +161,11 @@ class AutoSizeText extends StatelessWidget {
   /// {@endtemplate}
   final Function(bool overflow)? overflowCallback;
 
+  /// {@template auto_size_text.textScalerFunction}
+  /// Called in place of the default TextScaler.linear
+  /// {@endtemplate}
+  final TextScaler Function(double)? textScalerFunction;
+
   /// Creates a [AutoSizeText]
   ///
   /// If the [style] argument is null, the text will use the style from the
@@ -189,7 +194,8 @@ class AutoSizeText extends StatelessWidget {
     this.wrapWords,
     this.overflowReplacement,
     this.overflowCallback,
-  })  : textSpan = null;
+    this.textScalerFunction,
+  }) : textSpan = null;
 
   /// Creates a [AutoSizeText] widget with a [TextSpan].
   const AutoSizeText.rich(
@@ -216,7 +222,8 @@ class AutoSizeText extends StatelessWidget {
     this.wrapWords,
     this.overflowReplacement,
     this.overflowCallback,
-  })  : data = null;
+    this.textScalerFunction,
+  }) : data = null;
 
   @override
   Widget build(BuildContext context) {
@@ -236,7 +243,9 @@ class AutoSizeText extends StatelessWidget {
           locale: locale,
           softWrap: softWrap,
           overflow: this.overflow,
-          textScaler: TextScaler.linear(scale),
+          textScaler: textScalerFunction != null
+              ? textScalerFunction!(scale)
+              : TextScaler.linear(scale),
           maxLines: maxLines,
           semanticsLabel: semanticsLabel,
         );
